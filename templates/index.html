@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Registro</h1>
+
+        <form action="/" method="POST">
+
+            <label for="">Nombre:</label>
+            <input type="text" name="nombre" value="{{ estudiante_editar.nombre if estudiante_editar else '' }}" required>
+            <br><br>
+
+            <label for="">Apellido:</label>
+            <input type="text" name="apellido" value="{{ estudiante_editar.apellido if estudiante_editar else '' }}" required>
+            <br><br>
+            
+
+            <label for="">Edad:</label>
+            <input type="number" name="edad" value="{{ estudiante_editar.edad if estudiante_editar else '' }}" required>
+            <br><br>
+
+
+            <label for="">Sección:</label>
+            <select name="seccion" id="seccion">
+                <option value="11-1" name="seccion">11-1</option>
+                <option value="11-2" name="seccion">11-2</option>
+                <option value="11-3" name="seccion" >11-3</option>
+                <option value="11-4" name="seccion">11-4</option>
+            </select>
+            <br><br>
+
+
+            <label for="">Especialidad:</label>
+            <select name="especialidad" id="especialidad">
+                <option value="Desarrollo web" name="especialidad">Desarrollo Web</option>
+                <option value="Contabilidad" name="especialidad">Contabilidad</option>
+                <option value="Gestion" name="especialidad">Gestion</option>
+                <option value="Electronica" name="especialidad">Electronica</option>
+            </select>
+            <br><br>
+
+            <button type="submit">
+                Guardar
+            </button>
+
+
+            <h2>Estudiantes</h2>
+
+            <table border="1"> 
+
+
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Sección</th>
+                <th>Especialidad</th>
+<!-- Zona nueva -->
+                <th>Acciones</th>
+            </tr>
+
+            {% for estudiante in datos %}
+
+            <tr>
+                <td>{{estudiante.nombre }}</td>
+                <td>{{estudiante.apellido }}</td>
+                <td>{{estudiante.edad }}</td>
+                <td>{{estudiante.seccion }}</td>
+                <td>{{estudiante.especialidad }}</td>
+                <td>
+                    <a href="/editar/{{ estudiante.id }}" class="editar_button">
+                        Editar
+                    </a>
+
+                    <a href="/eliminar/{{ estudiante.id }}" class="eliminar_button">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+
+            {% endfor %}
+
+            </table>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

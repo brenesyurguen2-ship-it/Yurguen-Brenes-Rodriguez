@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container{
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+h2{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+form{
+    display: grid;
+    gap: 12px;
+}
+
+label{
+    font-weight: bold;
+    color: #555;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus{
+    outline: none;
+    border-color: #3498db;
+}
+
+select{
+    padding: 10px;
+    border-radius: 5px;
+    color: #555;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button{
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover{
+    background: #2980b9;
+}
+
+.eliminar_button{
+    background-color: #dc3545;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 7px 13px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.3s;
+    
+}
+
+.eliminar_button:hover{
+    background-color: #b02a37;
+}
+
+.editar_button{
+    background-color: #77ff00;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 7px 13px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.3s;
+    margin-right: 5px;
+    
+}
+
+.editar_button:hover{
+    background-color: #6aff00af;
+}
+
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th{
+    background: #3498db;
+    color: white;
+    padding: 12px;
+}
+
+td{
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background: #f2f2f2;
+}
+
+tr:hover{
+    background: #eaf4ff;
+}
