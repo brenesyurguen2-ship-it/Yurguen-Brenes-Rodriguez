@@ -12,4 +12,3 @@ CSS,
 Python,
 Lógica de programación
  
- [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Yurguen%20Brenes%20Rodriguez&theme=dark&hide_border=&locale=es&short_numbers=&mode=weekly)](https://git.io/streak-stats)
